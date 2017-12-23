@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if (service timemachine status > /dev/null)
+then
+        echo "Service running. Stopping Service.."
+        service timemachine stop > /dev/null
+        echo "Service stopped."
+else
+        echo "Starting serice!"
+        service timemachine start > /dev/null
+        echo "Service started!"
+fi
+
